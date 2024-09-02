@@ -1,0 +1,15 @@
+header {
+	height: 7vh;
+	padding: 15px 0;
+	background: #222;
+	
+	a {
+		color: #fff;
+		background-color: green;
+		font-size: 72px;
+
+		&:hover {
+			color: yellow;
+		} 
+	}
+}
