@@ -1,1 +1,18 @@
- 
+.custom-navbar {
+    padding: 21px 0 39px;
+    .navbar-brand {
+        margin: 0;
+    }
+    .nav-item {
+        .nav-link {
+            padding: 12px 23px;
+            margin-top: 3px;
+            color: #fff;
+            
+            &:hover {
+                text-decoration: none;
+                color: $primary-color;
+            }
+        }
+    }
+}
