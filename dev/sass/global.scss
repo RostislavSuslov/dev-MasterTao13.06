@@ -45,15 +45,12 @@ ul {
 }
 
 .dropdown-menu {
-    > li {
+    >li {
         &::before {
             display: none;
         }
     }
 }
- 
-
- 
 
 .btn {
     font-size: 15px;
@@ -122,5 +119,99 @@ ul {
         margin-left: 46px;
         height: 27px;
         width: 27px;
+    }
+}
+
+
+
+
+.container-xxl {
+    max-width: 1820px;
+    width: 100%;
+
+}
+
+.swiper-pagination-bullet {
+    width: 8px;
+    height: 8px;
+    border: 2px solid #fff;
+    opacity: 1;
+    background-color: transparent;
+}
+
+.swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet,
+.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+    margin: 0 13px;
+}
+
+.swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal {
+    line-height: 0;
+}
+
+.swiper-horizontal>.swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal,
+.swiper-pagination-custom,
+.swiper-pagination-fraction {
+    bottom: 43px;
+}
+
+.swiper-pagination-bullet-active {
+    background-color: #fff;
+}
+
+
+.template-title {
+    text-align: center;
+    position: relative;
+    padding-bottom: 48px;
+
+    &:before {
+        content: "";
+        position: absolute;
+        bottom: 33px;
+        left: 50%;
+        transform: translate(-50%, 0);
+        height: 2px;
+        width: 85px;
+        background: $secondary-color;
+    }
+
+    h2 {
+        font-size: 36px;
+        text-transform: uppercase;
+        font-weight: 700;
+        line-height: 125%;
+        margin-bottom: 6px;
+    }
+
+    h4 {
+        font-weight: 400;
+    }
+
+    &.case-2 {
+        text-align: left;
+
+        &:before {
+            left: 0;
+            transform: none;
+        }
+    }
+
+    &.case-3 {
+        max-width: 626px;
+        text-align: left;
+        &:before {
+            display: none;
+        }
+        h2 {
+            &::after {
+                content: "";
+                background-color: $secondary-color;
+                width: 85px;
+                height: 2px;
+                display: inline-block;
+                margin: 0 20px 10px;
+            }
+        }
     }
 }
