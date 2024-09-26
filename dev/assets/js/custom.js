@@ -23,40 +23,47 @@ const swiper = new Swiper('.swiper', {
     }
 });
 
-const user = {
-    name: "Bill",
-    lastName: "Picls",
-    old: 14,
-    parents: {
-        mather: {
-            name: 'Monika',
-            old: 33,
-        },
-        father: {
-            name: 'Pit',
-            old: 35,
+
+const advantagesSlideLength = document.querySelectorAll('.advantages .swiper-slide').length
+
+const swiperAdvantages = new Swiper('#advantages', {
+    spaceBetween: 12,
+    loop: true,
+    simulateTouch: true,
+    slidesPerView: 1,
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+        enabled: true,
+    },
+    breakpoints: {
+        1025: {
+            spaceBetween: 0,
+            loop: false,
+            slidesPerGroup: advantagesSlideLength,
+            simulateTouch: false,
+            pagination: {
+                enabled: false,
+                el: '.swiper-pagination',
+            }
         }
     }
-}
-
-console.log(user.parents.mather.name);
-console.log(user.parents.father.old);
-
-const dog = {
-    name: "Spike",
-    old: 5,
-    color: 'white',
-    parent: false,
-}
+});
 
 const cat = {
     name: "Murka",
-    old: 3,
-    color: "red",
-    parents: {
-        mather: 'Basya',
-        father: 'Arsen'
-    }
+    old: 7,
+    color: 'red'
 }
 
-console.log(cat.parents.mather);
+console.log(cat.name);
+
+
+const typeFile = document.querySelectorAll('.custom-file')
+
+typeFile.forEach(item => {
+    item.addEventListener('change', () => {
+        const fileName = item.closest('.input-box').querySelector('.file-name')
+        fileName.innerHTML = item.files[0].name;
+    })
+})

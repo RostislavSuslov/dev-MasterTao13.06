@@ -111,7 +111,7 @@ ul {
     }
 
     &.btn-lg {
-        padding: 19px 24px;
+        padding: 20px 24px;
         font-size: 16px;
     }
 
@@ -187,31 +187,88 @@ ul {
     h4 {
         font-weight: 400;
     }
+}
 
-    &.case-2 {
-        text-align: left;
 
-        &:before {
-            left: 0;
-            transform: none;
-        }
-    }
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
 
-    &.case-3 {
-        max-width: 626px;
-        text-align: left;
-        &:before {
-            display: none;
-        }
-        h2 {
-            &::after {
+[type='number'] {
+    -moz-appearance: textfield;
+}
+
+[type="checkbox"],
+[type="file"] {
+    display: none;
+}
+
+input {
+    &[type="checkbox"] {
+        +label {
+            padding-left: 33px;
+            line-height: 126%;
+            cursor: pointer;
+
+            &::before {
                 content: "";
-                background-color: $secondary-color;
-                width: 85px;
-                height: 2px;
-                display: inline-block;
-                margin: 0 20px 10px;
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 24px;
+                height: 24px;
+                border-radius: 4px;
+                border: 1px solid $bg-body;
+                background-color: #fff;
+            }
+
+            &:hover {
+                &::before {
+                    border-color: $secondary-color;
+                }
+            }
+
+            &:focus,
+            &:active {
+                &::before {
+                    border-color: $primary-color;
+                }
+            }
+        }
+
+        &:checked {
+            +label {
+                &:before {
+                    background: url('assets/img/icon-checked.svg') center no-repeat #fff;
+                }
             }
         }
     }
+}
+
+
+
+
+input[type="file"]+label {
+    cursor: pointer;
+    text-align: center;
+    padding: 12px;
+    margin-top: 46px;
+    border-radius: 10px;
+    background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='10' ry='10' stroke='%23ffffff42' stroke-width='1' stroke-dasharray='3%2c 3' stroke-dashoffset='0' stroke-linecap='square'/%3e%3c/svg%3e");
+    background-position: center;
+    background-size: calc(100% - 1px);
+    cursor: pointer;
+
+    &:hover {
+        background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='10' ry='10' stroke='%2389C249' stroke-width='1' stroke-dasharray='3%2c 3' stroke-dashoffset='0' stroke-linecap='square'/%3e%3c/svg%3e");
+    }
+    &:active {
+        color: $secondary-color;
+    }
+}
+
+section {
+    padding: $section-padding;
 }
