@@ -1,0 +1,37 @@
+.advantages {
+    padding-bottom: 62px;
+    .row {
+        padding-top: 15px;
+    }
+}
+
+
+.advantage {
+    min-height: 201px;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 26px;
+
+    &-img {
+        display: inline-block;
+        border-radius: 50%;
+        border: 1px solid #6C7188;
+        padding: 10px;
+        margin-bottom: 22px;
+
+        img {
+            width: 91px;
+            background-color: $secondary-color;
+            height: 91px;
+            object-fit: scale-down;
+            border-radius: 50%;
+        }
+    }
+}
+
+
+.advantage-title {
+    font-size: 18px;
+    line-height: 124%;
+    margin: 0;
+}

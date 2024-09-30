@@ -1,4 +1,4 @@
-const swiper = new Swiper('.swiper', {
+const swiper = new Swiper('#banner-slider', {
     loop: true,
     pagination: {
         el: '.swiper-pagination',
@@ -8,8 +8,6 @@ const swiper = new Swiper('.swiper', {
     navigation: {
         enabled: false,
     },
-
-  
 
     breakpoints: {
         // when window width is >= 992px
@@ -23,11 +21,9 @@ const swiper = new Swiper('.swiper', {
     }
 });
 
-
-const advantagesSlideLength = document.querySelectorAll('.advantages .swiper-slide').length
+const advantageSlide = document.querySelectorAll('#advantages .swiper-slide')
 
 const swiperAdvantages = new Swiper('#advantages', {
-    spaceBetween: 12,
     loop: true,
     simulateTouch: true,
     slidesPerView: 1,
@@ -40,7 +36,7 @@ const swiperAdvantages = new Swiper('#advantages', {
         1025: {
             spaceBetween: 0,
             loop: false,
-            slidesPerGroup: advantagesSlideLength,
+            slidesPerGroup: advantageSlide,
             simulateTouch: false,
             pagination: {
                 enabled: false,
@@ -49,15 +45,6 @@ const swiperAdvantages = new Swiper('#advantages', {
         }
     }
 });
-
-const cat = {
-    name: "Murka",
-    old: 7,
-    color: 'red'
-}
-
-console.log(cat.name);
-
 
 const typeFile = document.querySelectorAll('.custom-file')
 

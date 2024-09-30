@@ -18,14 +18,15 @@
                 transform: none;
             }
         }
+
         &.case-3 {
             max-width: 626px;
             text-align: left;
-    
+
             &:before {
                 display: none;
             }
-    
+
             h2 {
                 &::after {
                     content: "";
@@ -36,6 +37,22 @@
                     margin: 0 20px 10px;
                 }
             }
+        }
+    }
+
+    #advantages {
+        padding-top: 17px;
+        width: calc(100% + 28px);
+        margin: 0 -12px;
+        .swiper-wrapper {
+            flex-wrap: wrap;
+            width: calc(100% + 24px);
+        }
+
+        .advantage {
+            width: 100%;
+            max-width: 25%;
+            padding: 0 22px;
         }
     }
 }
