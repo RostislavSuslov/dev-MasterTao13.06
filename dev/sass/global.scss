@@ -264,6 +264,7 @@ input[type="file"]+label {
     &:hover {
         background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='10' ry='10' stroke='%2389C249' stroke-width='1' stroke-dasharray='3%2c 3' stroke-dashoffset='0' stroke-linecap='square'/%3e%3c/svg%3e");
     }
+
     &:active {
         color: $secondary-color;
     }
@@ -271,4 +272,25 @@ input[type="file"]+label {
 
 section {
     padding: $section-padding;
+}
+
+.bg-section {
+    position: relative;
+    padding-left: 88px;
+    padding-right: 88px;
+
+    &::before {
+        content: "";
+        display: flex;
+        width: calc(100% - 100px);
+        max-width: 1820px;
+        height: 100%;
+        background-color: $bg-section;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, 0);
+        top: 0;
+        z-index: -1;
+        border-radius: 20px;
+    }
 }
