@@ -1,3 +1,14 @@
+@media screen and (max-width: 861.99px) {
+    .slider-template {
+        max-width: 360px;
+        padding-bottom: 50px;
+
+        ~.swiper-navigation {
+            max-width: 552px;
+        }
+    }
+}
+
 @media screen and (max-width: 767.99px) {
     .calculation-form {
         margin: 0 auto;
@@ -24,6 +35,7 @@
         &:first-child {
             margin-top: 6px;
         }
+
         &:last-child {
             margin-bottom: 18px;
         }
@@ -31,9 +43,47 @@
 
     input {
         &[type=file] {
-            + label {
+            +label {
                 margin-top: 32px;
             }
         }
+    }
+
+    .swiper-navigation {
+        display: none;
+    }
+
+    .slider-template {
+        max-width: 335px;
+        padding-bottom: 50px;
+    }
+
+    .card {
+        max-width: 335px;
+        padding: 0 23px 27px;
+
+        .img-box {
+            margin: 0 -20px 28px;
+        }
+
+        .card-title {
+            margin-bottom: 10px;
+        }
+
+        .card-option {
+            margin: 0 0 27px 0;
+        }
+
+        .card-price {
+            margin-bottom: 24px;
+        }
+
+        .btn-row {
+            .btn {
+                max-width: 138px;
+                padding: 13px 8px;
+            }
+        }
+
     }
 }

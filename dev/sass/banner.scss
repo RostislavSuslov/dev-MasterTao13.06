@@ -1,5 +1,5 @@
 .banner {
-    
+
 
     .swiper-slide {
         background-position: center;
@@ -50,4 +50,12 @@
     .swiper-button-next {
         justify-content: flex-end;
     }
+
+    .swiper-horizontal>.swiper-pagination-bullets,
+    .swiper-pagination-bullets.swiper-pagination-horizontal,
+    .swiper-pagination-custom,
+    .swiper-pagination-fraction {
+        bottom: 43px;
+    }
+
 }

@@ -1,16 +1,21 @@
 .advantages {
     padding-bottom: 62px;
+
     .row {
         padding-top: 15px;
+    }
+
+    .advantage {
+        margin: 0 auto 26px;
     }
 }
 
 
 .advantage {
     min-height: 201px;
-    margin: 0 auto;
     text-align: center;
-    margin-bottom: 26px;
+   
+    max-width: 263px;
 
     &-img {
         display: inline-block;
@@ -33,5 +38,6 @@
 .advantage-title {
     font-size: 18px;
     line-height: 124%;
-    margin: 0;
+    margin: 0 auto;
+    max-width: 263px;
 }

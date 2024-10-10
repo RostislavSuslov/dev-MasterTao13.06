@@ -44,6 +44,8 @@
     }
 
     .banner {
+        padding-top: 0;
+        padding-bottom: 0;
         .swiper-slide {
             &:before {
                 content: "";
@@ -102,15 +104,47 @@
         }
 
         &:before {
-            bottom: 28px;
+            bottom: 30px;
         }
     }
 
-    .calculation-img {
-        display: none;
+    .calculation {
+        padding: 54px 0 60px;
+
+        &-row {
+            display: flex;
+            align-items: flex-start;
+            padding-top: 21px;
+        }
+
+        &-img {
+            display: none;
+        }
+
+        &-form {
+            margin: 0 auto;
+        }
     }
 
-    .calculation-form {
-        margin: 0 auto;
+    .advantages {
+        padding-bottom: 53px;
+
+        .swiper {
+            padding-top: 16px;
+          padding-bottom: 16px;        }
+
+        .swiper-horizontal>.swiper-pagination-bullets,
+        .swiper-pagination-bullets.swiper-pagination-horizontal,
+        .swiper-pagination-custom,
+        .swiper-pagination-fraction {
+            bottom: 7px;
+
+        }
     }
+
+    .delivery {
+        .template-title {
+            margin-bottom: 2px;
+        }
+    } 
 }
